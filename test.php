@@ -7,7 +7,7 @@ if(isset($_POST["submit"])) {
     $image = new Imagick($_FILES['fileToUpload']['tmp_name']);
 
     //get datas of 3 colors
-    $blue = $image->getImageChannelMean(Imagick::COLOR_ALPHA);
+    $blue = $image->getImageChannelMean(Imagick::COLOR_BLUE);
     $red = $image->getImageChannelMean(Imagick::COLOR_RED);
     $green = $image->getImageChannelMean(Imagick::COLOR_GREEN);
 
